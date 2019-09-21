@@ -19,10 +19,18 @@ end
 
 class JellyBean < Dessert
   # add code for setters and getters
+  
   def initialize(flavor)
-    @flavor = "vanilla"
+    @flavor = flavor
     @calories = 5
-    @name = flavor + " jelly bean"
+    @name = @flavor + " jelly bean"
   end
   attr_accessor :flavor
+  def delicious?
+    if (@flavor != "licorice")
+      return true
+    else
+    return false
+    end
+  end
 end
